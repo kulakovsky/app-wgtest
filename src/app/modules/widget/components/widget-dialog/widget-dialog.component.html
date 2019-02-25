@@ -1,0 +1,125 @@
+<div class="app-dialog-header">
+
+    <div class="app-dialog-header__title">Диолог выбора элементов</div>
+
+    <div class="app-dialog-header__action">
+
+        <button mat-icon-button tabindex="-1" [mat-dialog-close]>
+
+            <mat-icon>close</mat-icon>
+
+        </button>
+
+    </div>
+
+</div>
+
+<div [formGroup]="formGroup" class="app-dialog-actions">
+
+    <div class="app-dialog-actions__row">
+
+        <mat-form-field>
+
+            <input formControlName="titleCtrl" matInput type="search" placeholder="Поиск" value="">
+
+        </mat-form-field>
+
+    </div>
+
+    <div class="app-dialog-actions__row">
+
+        <mat-form-field>
+
+            <mat-select [(value)]="selected"
+                        formControlName="valueCtrl"
+                        placeholder="Фильтр">
+
+                <mat-option>Без фильтра</mat-option>
+
+                <mat-option value="10">Номер > 10</mat-option>
+
+                <mat-option value="100">Номер > 100</mat-option>
+
+                <mat-option value="200">Номер > 200</mat-option>
+
+            </mat-select>
+
+        </mat-form-field>
+
+    </div>
+
+</div>
+
+<div *ngIf="filteredItems$ | async as items" class="app-dialog-body">
+
+    <ng-container *ngIf="items.length; else placeholder"></ng-container>
+
+    <div class="app-dialog-body__section" *ngFor="let item of items; trackBy: trackById">
+
+        <mat-checkbox [checked]="item.selected" [disabled]="selectedItems.length > 2"
+                      (change)="toggleSelection(item)">{{item.title}}
+        </mat-checkbox>
+
+    </div>
+
+</div>
+
+<div class="app-dialog-display">
+
+    <div class="app-dialog-display__title">
+
+        Выбранные элементы на данный момент:
+
+    </div>
+
+    <div class="app-dialog-display-values">
+
+        <div class="app-dialog-display__value" *ngFor="let selectedItem of selectedItems">
+
+            <div class="app-dialog-display__value_title">
+
+                <span>{{selectedItem.title}}</span>
+
+            </div>
+
+            <div class="app-dialog-display__value_button">
+
+                <button mat-icon-button (click)="deleteItem(selectedItem)">
+
+                    <mat-icon>close</mat-icon>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="app-dialog-footer__buttons">
+
+    <button class="app-dialog-footer__button"
+            mat-flat-button cdkFocusInitial
+            (click)="close()">
+
+        Сохранить
+
+    </button>
+
+    <button class="app-dialog-footer__button"
+            mat-flat-button
+            [mat-dialog-close]>
+
+        Отмена
+
+    </button>
+
+</div>
+
+<ng-template #placeholder>
+
+    <div class="placeholder">No items</div>
+
+</ng-template>

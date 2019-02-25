@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/purple-green.css";
+
+// fonts
+@import "assets/fonts/arial/arial.ttf";
+
+@font-face{
+  font-family: Arial;
+  src: url('assets/fonts/arial/arial.ttf') format('truetype');
+
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/MaterialIcons/MaterialIcons-Regular.eot'); /* For IE6-8 */
+  src: local('Material Icons'),
+  local('MaterialIcons-Regular'),
+  url('/assets/fonts/MaterialIcons/MaterialIcons-Regular.woff2') format('woff2'),
+  url('/assets/fonts/MaterialIcons/MaterialIcons-Regular.woff') format('woff'),
+  url('/assets/fonts/MaterialIcons/MaterialIcons-Regular.ttf') format('truetype');
+}
+
+.material-icons {
+
+  font-family: 'Material Icons', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+}
+
+
+body {
+  overflow: hidden;
+  background-color: #eceff1;
+  height: 100%
+}
+
+.cdk-overlay-pane {
+
+  & .mat-dialog-container {
+    padding: 0;
+  }
+}

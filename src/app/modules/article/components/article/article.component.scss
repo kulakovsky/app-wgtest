@@ -1,0 +1,47 @@
+.article {
+  margin: auto;
+  width: 798px;
+  font-family: Arial, sans-serif;
+  color: #4d4e53;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.article__heading {
+  font-size: 18px;
+  line-height: 1;
+  font-weight: normal;
+  color: #707275;
+  margin: 18px 0;
+}
+
+@media screen and (min-width: 800px) {
+
+  .article__content {
+    column-count: 2;
+    column-gap: 48px;
+    column-rule: 1px solid #a6a6a6;
+    line-height: 1.286;
+  }
+
+}
+
+.article-content__indent {
+  text-indent: 16px;
+}
+
+.article-content__text {
+  color: #707275;
+  font-weight: normal;
+  margin: 0;
+}
+
+.article-content__sections_title {
+  font-weight: normal;
+  line-height: 1.6;
+}
+
+.article-content__sections {
+  margin: 20px 0;
+  padding-left: 18px;
+}

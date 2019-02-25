@@ -1,0 +1,49 @@
+<h1 class="app-widget__title">
+
+    Выбор элементов
+
+</h1>
+
+<div class="app-widget__body">
+
+    <div class="app-widget__description">
+
+        <span>На данный момент у вас выбрано {{items.length | suffix}}:</span>
+
+    </div>
+
+    <div class="app-widget__values">
+
+        <div class="app-widget__value" *ngFor="let item of items">
+
+            <div class="app-widget__value_title">
+
+                <span>{{item.title}}</span>
+
+            </div>
+
+            <div class="app-widget__value_button">
+
+                <button mat-icon-button (click)="onDeleteItemButtonClick(item)">
+
+                    <mat-icon>close</mat-icon>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="app-widget__selection">
+
+    <button class="app-widget__selection_button" mat-button (click)="onWidgetDialogButtonClick()">
+
+        Изменить мой выбор
+
+    </button>
+
+</div>

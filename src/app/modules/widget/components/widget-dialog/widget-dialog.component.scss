@@ -1,0 +1,114 @@
+.app-widget-dialog {
+  display: block;
+  background: #2A2A2A;
+  font-family: Roboto,"Helvetica Neue",sans-serif;
+  overflow: hidden;
+  width: auto;
+}
+
+.app-dialog-header {
+  align-items: center;
+  border-bottom: 1px solid #858585;
+  display: flex;
+  height: 60px;
+}
+
+.app-dialog-header__title {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  padding: 0 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.app-dialog-header__action {
+  margin-left: auto;
+}
+
+
+.app-dialog-actions {
+  display: flex;
+  margin: 12px 12px;
+}
+
+.app-dialog-actions__row {
+  display: flex;
+  flex: 1;
+  padding: 0 12px;
+}
+
+.app-dialog-body {
+  background-color: #787878;
+  border-bottom: 1px solid #787878;
+  border-top: 1px solid #787878;
+  flex-grow: 1;
+  padding: 0 16px;
+  overflow: auto;
+
+  height: 280px;
+
+  &::-webkit-scrollbar {
+    background-color: #fefefe;
+    border-radius: 2px;
+    height: 4px;
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #3d3d3d;
+    border-radius: 2px;
+  }
+
+}
+
+.app-dialog-body__section {
+  margin: 10px 0;
+}
+
+.app-dialog-display {
+  margin: 12px 12px;
+}
+
+.app-dialog-display__title {
+  padding-bottom: 10px;
+}
+
+.app-dialog-display-values {
+  display: flex;
+}
+
+.app-dialog-display__value {
+  display: flex;
+  background: #787878;
+  padding-left: 12px;
+  margin-right: 12px;
+}
+
+.app-dialog-display__value_title {
+  align-items: center;
+  display: flex;
+  font-size: 14px;
+}
+
+.app-dialog-display__value_button {
+  display: flex;
+  justify-content: center;
+}
+
+.app-dialog-footer__buttons {
+  height: 60px;
+}
+
+.app-dialog-footer__button {
+  margin: 0 12px;
+}
+
+.placeholder {
+  color: #ffffff;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

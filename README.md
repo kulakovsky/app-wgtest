@@ -11,7 +11,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 npm link @angular/cli
 
-появится линка, пропишите её(пример: alias ng="/user/local/lib/node_modules/@angular/cli/ng")
+появится линка, пропишите её добавив в пути '/bin/ng'(пример: alias ng="/user/local/lib/node_modules/@angular/cli/bin/ng")
 
 
 ##

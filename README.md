@@ -19,7 +19,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 5)/widget -4е задание
 
-## Running on a linux or Macos
+Если вы пользуетесь Linux или Macos могут возникнуть проблемы, ниже представлено решение
 
 npm link @angular/cli
 

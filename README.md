@@ -4,7 +4,8 @@ my version node v8.11.2
 
 `npm install` - to install node modules.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` or `ng serve --host 0.0.0.0 --port 4200` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
 
 
 Если вы пользуетесь Linux или Macos могут возникнуть проблемы, ниже представлено решение
